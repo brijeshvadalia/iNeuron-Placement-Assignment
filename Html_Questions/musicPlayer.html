@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+</head>
+<body>
+<h3>HTML alone doesn't have the capability to create a functional music player, as it primarily focuses on the structure and presentation of web content. However, you can use HTML along with JavaScript to create a basic music player interface.</h3> 
+<head>
+  <title>Music Player</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .player-container {
+      width: 300px;
+      margin: 50px auto;
+      text-align: center;
+    }
+    audio {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    button {
+      padding: 5px 10px;
+      margin: 0 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="player-container">
+    <audio id="audio-player" controls>
+      <source src="song.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <div>
+      <button onclick="play()">Play</button>
+      <button onclick="pause()">Pause</button>
+      <button onclick="stop()">Stop</button>
+    </div>
+  </div>
+
+  <script>
+    var audio = document.getElementById("audio-player");
+
+    function play() {
+      audio.play();
+    }
+
+    function pause() {
+      audio.pause();
+    }
+
+    function stop() {
+      audio.pause();
+      audio.currentTime = 0;
+    }
+  </script>
+
+</body>
+</html>
