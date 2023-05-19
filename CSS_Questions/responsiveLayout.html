@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout</title>
+<style>
+    * {
+  box-sizing: border-box;
+}
+
+.grid-wrap {
+  padding: 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-gap: 2rem;
+}
+.grid + .grid {
+  margin-top: 2rem;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Baloo 2", sans-serif;
+}
+
+span {
+  border: 2px dashed currentcolor;
+  border-radius: 4px;
+  min-height: 15vh;
+  padding: 1rem;
+  color: #0178d4;
+  font-size: 3rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+div:nth-child(2) span {
+  color: purple;
+}
+
+div:nth-child(3) span {
+  color: green;
+}
+
+div:nth-child(4) span {
+  color: orangered;
+}
+</style>
+</head>
+<body>
+    <main class="grid-wrap">
+
+        <div class="grid">
+          <span>One column default</span>
+        </div>
+      
+        <div class="grid">
+          <span>Half column 1</span>
+          <span>Half column 2</span>
+        </div>
+      
+        <div class="grid">
+          <span>3-col 1</span>
+          <span>3-col 2</span>
+          <span>3-col 3</span>
+        </div>
+      
+        <div class="grid">
+          <span>4-col 1</span>
+          <span>4-col 2</span>
+          <span>4-col 3</span>
+          <span>4-col 4</span>
+        </div>
+      
+      </main>   
+</body>
+</html>
