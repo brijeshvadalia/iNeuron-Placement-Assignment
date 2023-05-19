@@ -5,8 +5,243 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS QUESTIONS</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+    <h1 style="text-align: center;">🎯 CSS QUESTIONS 🎯 </h1>
+
+    <div class="question">
+  <h2>Question :</h2>
+  <h3>Whats Box Model in CSS & Which CSS Properties are part of it ?
+    <b>(2 Marks)</b></h3>
+    <hr>
+    <h2>Answer :</h2>
+    <h3>
+        A key idea in CSS (Cascading Style Sheets) is the box model, which explains how items are presented and how their dimensions and spacing are determined.In the box model, every element on a webpage is represented as a rectangular box. <br><br>
+        The box model's accompanying CSS properties are used to regulate and alter the size and spacing of elements. The following are some of the significant CSS box model properties:
+        <ul>
+            <li>Width and Height </li>
+            <li>Padding</li>
+            <li>Border</li>
+            <li>Margin</li>
+        </ul>
+        When using the box model in CSS, these attributes, along with others like box-sizing, overflow, and display, provide you the ability to regulate the arrangement and spacing of items.
+    </h3>
+</div>
+
+<div class="question">
+    <h2>Question :</h2>
+    <h3>What are the Different Types of Selectors in CSS & what are the advantages of them?
+      <b>(2 Marks)</b></h3>
+      <hr>
+      <h2>Answer :</h2>
+      <h3>
+        CSS has a variety of selector types that let you focus on particular webpage elements. Each kind of selector has unique benefits and applications. Here are a few selectors that are frequently employed:
+          <ul>
+              <li>Element selectors </li>
+              <li>Class selectors</li>
+              <li>ID selectors</li>
+              <li>Attribute selectors</li>
+              <li>Pseudo-classes and pseudo-elements</li>
+              <li>Descendant selectors</li>
+              <li>Adjacent sibling selectors</li>
+          </ul>
+          The advantages of using different types of selectors in CSS include:
+          <ul>
+            <li>Specificity</li>
+            <li>Flexibility</li>
+            <li>Organization and maintenance</li>
+            <li>Dynamic styling</li>
+            <li>Modularity and reusability</li>
+          </ul>
+      </h3>
+  </div>
+
+  <div class="question">
+    <h2>Question :</h2>
+    <h3>What is VW/VH & How its different from PX?
+      <b>(2 Marks)</b></h3>
+      <hr>
+      <h2>Answer :</h2>
+      <h3>
+        The relative units of measurement VW (viewport width) and VH (viewport height) in CSS allow you to express sizes as a percentage of the viewport dimensions. The visible portion of a webpage in the browser window is referred to as the viewport.VW (viewport width): One VW is one percent of the viewport's width. For instance, 1 VW would be equal to 10 pixels (1000 * 1%) if the viewport width was 1000 pixels.VH (viewport height): One VH equals one percent of the viewport's height. For instance, 1 VH would be equivalent to 8 pixels (800 * 1%) if the viewport height was 800 pixels. <br><br>
+
+        PX (pixels), on the other hand, is an absolute unit of measurement in CSS and denotes a predetermined amount of pixels. The viewport dimensions are not relevant.The way that VW/VH and PX scale with the viewport is the primary distinction between them. PX units are fixed in size independent of the viewport size, but VW and VH units enable responsive designs by changing their sizes based on the viewport dimensions.
+        
+      </h3>
+  </div>
+
+  <div class="question">
+    <h2>Question :</h2>
+    <h3>Whats difference between Inline, Inline Block and block ?
+      <b>(3 Marks)</b></h3>
+      <hr>
+      <h2>Answer :</h2>
+      <h3>
+        The key differences between these display properties:
+<ul>
+      <li>  <b>Layout:</b> Inline elements do not start on a new line and only occupy as much space as necessary for their content. Inline block elements flow within the text content but can have explicit dimensions and spacing. Block elements start on a new line and occupy the full width available.</li>
+        <br>
+       <li> <b>Dimensions:</b> Inline elements do not respect the width and height properties. Inline block and block elements can have their dimensions explicitly set using CSS.</li>
+        <br>
+      <li>  <b>Spacing:</b> Inline elements do not allow margins or paddings to be applied to them. Inline block and block elements can have margins and paddings applied, allowing for spacing control.</li>
+        <br>
+      <li>  <b>Flow:</b> Inline and inline block elements flow within the text content and do not create line breaks. Block elements start on new lines and create line breaks before and after them.</li>
+        <br>
+      <li>  <b>Hierarchy:</b> Inline and inline block elements can be nested within block elements, while block elements cannot be nested inside inline elements.</li>
+
+    </ul>
+      </h3>
+  </div>
+
+  <div class="question">
+    <h2>Question :</h2>
+    <h3>How is Border-box different from Content Box?
+      <b>(2 Marks)</b></h3>
+      <hr>
+      <h2>Answer :</h2>
+      <h3>
+        The box-sizing property in CSS gives you control over how padding and borders are included or excluded when determining an element's dimensions. The box-sizing property has two values: content-box and border-box. <br><br>
+        The method used to determine an element's width and height is what distinguishes border-box from content-box. Border-box takes padding and borders into account when calculating measurements inside the given width and height, while content-box bases its calculations solely on content.With <b>content-box</b>, the width and height are calculated based on the content's dimensions, and padding and border are added on top of that.With <b>border-box</b>, the width and height include the content, padding, and border. 
+      </h3>
+  </div>
+
+  <div class="question">
+    <h2>Question :</h2>
+    <h3>What’s z-index and How does it Function ?
+      <b>(2 Marks)</b></h3>
+      <hr>
+      <h2>Answer :</h2>
+      <h3>
+        On a website, the z-index property of CSS is used to regulate the stacking order of items that are placed along the z-axis (the depth axis). It describes how elements should be placed in respect to one another when they overlap.The stacking order is decided by the z-index attribute, which takes integer values. Higher z-index values are shown in front of lower z-index values for elements. If two elements share the same z-index, their position in the HTML structure determines their stacking order, with the latter element appearing on top.
+        <br><br>
+        It's crucial to understand that only items with a stacking context established are impacted by the z-index attribute. A child element behaves as if its parent had a z-index of auto if its parent's z-index is not defined, and the child element's z-index is then relative to other children elements at the same stacking level.You can manage how items are stacked along the z-axis by using the z-index property to regulate the visibility and layering of overlapping elements on a webpage.
+      </h3>
+  </div>
+
+  <div class="question">
+    <h2>Question :</h2>
+    <h3>What’s z-index and How does it Function ?
+      <b>(2 Marks)</b></h3>
+      <hr>
+      <h2>Answer :</h2>
+      <h3>
+        On a website, the z-index property of CSS is used to regulate the stacking order of items that are placed along the z-axis (the depth axis). It describes how elements should be placed in respect to one another when they overlap.The stacking order is decided by the z-index attribute, which takes integer values. Higher z-index values are shown in front of lower z-index values for elements. If two elements share the same z-index, their position in the HTML structure determines their stacking order, with the latter element appearing on top.
+        <br><br>
+        It's crucial to understand that only items with a stacking context established are impacted by the z-index attribute. A child element behaves as if its parent had a z-index of auto if its parent's z-index is not defined, and the child element's z-index is then relative to other children elements at the same stacking level.You can manage how items are stacked along the z-axis by using the z-index property to regulate the visibility and layering of overlapping elements on a webpage.
+      </h3>
+  </div>
+
+  <div class="question">
+    <h2>Question :</h2>
+    <h3>What’s Grid & Flex and difference between them?
+      <b>(5 Marks)</b></h3>
+      <hr>
+      <h2>Answer :</h2>
+      <h3>
+        Grid and Flexbox are two powerful layout systems in CSS that provide different approaches to creating responsive and flexible layouts. Here's an overview of both:
+        <br>
+        <strong>Flexbox :</strong>
+        <br>
+<ul>
+        <li>Flexbox is a one-dimensional layout system designed for arranging elements in a linear direction (either horizontally or vertically).</li>
+
+        <li>It operates along either the main axis (row or column) or the cross axis (opposite to the main axis).</li>
+
+        <li>Flexbox is well-suited for creating dynamic and responsive layouts, especially for components that need to be aligned, distributed, or reordered.</li>
+
+        <li>It allows you to control the size and alignment of items within a flex container, using properties like flex-direction, justify-content, align-items, and align-self.</li>
+
+        <li>Flexbox is particularly effective for creating flexible and fluid layouts with elements that need to grow, shrink, or remain fixed within a container.</li>
+
+        <li>It is best for one-dimensional layouts, where the focus is on arranging elements in a single row or column.</li>
+</ul>
+<strong>Grid :</strong>
+<ul>
+    <li>Grid is a two-dimensional layout system designed for creating complex grid-based layouts.</li>
+
+    <li>It allows you to define both rows and columns, forming a grid structure that elements can be placed into.</li>
+
+    <li>Grid provides precise control over both the horizontal and vertical alignment and spacing of elements within the grid.</li>
+
+    <li>It allows you to easily create responsive layouts with features like automatic track sizing, alignment, and overlapping.</li>
+
+    <li>Grid offers powerful features such as the ability to define named areas, control the placement of items using line-based positioning, and create flexible or fixed-size grid tracks.</li>
+
+    <li>It is ideal for creating complex, multi-dimensional layouts, such as grids with header and footer sections or grid-based page structures.</li>
+</ul>
+<strong>Key differences between Grid and Flexbox:</strong>
+
+<ul>
+    <li><b>Dimensionality:</b> Flexbox is a one-dimensional layout system, focusing on arranging elements in a single row or column. Grid, on the other hand, is a two-dimensional layout system that allows for complex grid structures with both rows and columns.</li>
+
+    <li><b>Layout complexity: </b>Grid is more powerful and capable of handling complex layouts, including the ability to create grid tracks, align items along both axes, and create named grid areas. Flexbox is simpler and more suited for simpler one-dimensional layouts.</li>
+
+    <li><b>Control over alignment:</b> Grid provides more fine-grained control over alignment, allowing you to specify alignment along both axes independently. Flexbox has alignment properties but primarily focuses on alignment within the main axis.</li>
+
+    <li><b>Reordering:</b> Flexbox provides powerful features for reordering elements within a flex container using the order property. Grid does not have built-in reordering capabilities.</li>
+
+    <li><b>Browser support:</b> Both Flexbox and Grid have good browser support, but Grid has slightly better overall support, especially in older browsers.</li>
+
+    <li>It is ideal for creating complex, multi-dimensional layouts, such as grids with header and footer sections or grid-based page structures.</li>
+</ul>
+      </h3>
+  </div>
+
+  <div class="question">
+    <h2>Question :</h2>
+    <h3>Difference between absolute and relative and sticky and fixed position explain with
+        example.
+      <b>(5 Marks)</b></h3>
+      <hr>
+      <h2>Answer :</h2>
+      <h3>
+         <ol>
+            <li><b>Absolute Positioning:</b></li>
+<br>
+                With position: absolute, an element is positioned relative to its nearest positioned ancestor or to the initial containing block if no positioned ancestor is found.
+                The element is completely removed from the normal flow of the document, and other elements are not affected by it.The position of the element is specified using the top, right, bottom, and left properties. <br> <br>
+                Example: Let's say we have an HTML structure with a parent div and an absolutely positioned child div:
+                <br><br>
+                < div style="position: relative;"> <br>
+                    < div style="position: absolute; top: 20px; left: 30px;">Absolute Position</ div> <br>
+                  < /div> <br>
+<br>
+In this example, the child div with position: absolute is positioned 20 pixels down from the top of its parent div and 30 pixels from the left.  
+<br><br>
+<li><b>Relative Positioning:</b></li>
+With position: relative, an element is positioned relative to its normal position in the document flow.The element still takes up space in the document flow, and other elements are not affected by it.The position of the element can be adjusted using the top, right, bottom, and left properties, but it will be relative to its normal position. <br><br>
+
+Example: Let's modify the previous example by changing the child div's position to relative:
+<br><br>
+
+< div style="position: relative;"> <br>
+    < div style="position: relative; top: 20px; left: 30px;">Relative Position</ div> <br>
+  < /div> <br>
+  <br>
+  In this case, the child div with position: relative is shifted 20 pixels down and 30 pixels to the right from its normal position within the parent div.
+<br><br>
+  <li><b>Sticky Positioning:</b></li>
+
+  With position: sticky, an element is positioned based on the user's scroll position. It acts like relative positioning until the user scrolls to a specified threshold, after which it becomes fixed positioning.The element remains in the normal document flow until the specified scroll threshold is reached, at which point it "sticks" to that position on the screen.The position of the element is defined using top, right, bottom, and left properties in conjunction with a specified scroll threshold. <br><br>
+Example: Let's consider a navigation bar that sticks to the top of the viewport when the user scrolls past a certain point: <br><br>
+< nav style="position: sticky; top: 0;"> <br>
+    <-- Navigation content --> <br>
+  < /nav> <br> <br> 
+  In this example, the navigation bar will behave as relative positioning until the user scrolls past the top of the viewport, at which point it will become fixed and stick to the top.
+  <br><br>
+  <li><b>Fixed Positioning:</b></li>
+
+With position: fixed, an element is positioned relative to the browser window, regardless of scrolling.The element is completely removed from the normal document flow, and it remains fixed in its specified position even when the page is scrolled.The position of the element is determined using the top, right, bottom, and left properties. <br><br>
+Example: Let's create a "Back to Top" button that remains fixed at the bottom-right corner of the window:
+<br><br>
+< button style="position: fixed; bottom: 20px; right: 20px;">Back to Top< /button> <br><br>
+
+In this case, the button will always be positioned 20 pixels from the bottom and 20 pixels from the right of the browser window, regardless of scrolling.
+
+         </ol>
+         These positioning properties offer different ways to control the position of elements on a webpage, allowing you to achieve different layout and interaction effects based on your requirements.
+      </h3>
+  </div>
 </body>
 </html>
