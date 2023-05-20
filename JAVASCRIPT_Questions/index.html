@@ -12,14 +12,277 @@
 
     <div class="question">
   <h2>Question :</h2>
-  <h3>
-    <b>(1 Marks)</b></h3>
+  <h3> What is Hoisting in Javascript ?
+    <b>(3 Marks)</b></h3>
     <hr>
     <h2>Answer :</h2>
     <h3>
-      
+        Before the code is run, during the compilation step of JavaScript, variable and function declarations are hoisted to the top of their contained scope. As a result, variables and functions may be used before they are explicitly declared in your code.Variable and function declarations must be hoisted, but there are some peculiarities in how they must be hoisted. <br><br>
+        <strong>Variable hoisting:</strong> When a variable is hoisted, only the declaration—not the initialization—is moved to the top. As a result, the variable is created and is accessible from anywhere inside its scope, but until it is given a value, its value is unknown. <br><br>
+        Here's an example of variable hoisting: <br> <br>
+        console.log(x); // Output: undefined <br>
+        var x = 10;<br>
+         console.log(x); // Output: 10 <br> <br>
+
+         <strong>Function hoisting:</strong>Function declarations are fully hoisted, which implies that the body of the function as well as the declaration are moved to the top. You are then able to invoke the function before it is really written in the code.
+          <br><br>
+          Here's an example of function hoisting: <br><br>
+
+           foo(); // Output: "Hello" <br>
+
+             function foo() { <br>
+             console.log("Hello");  <br>
+             } <br> <br>
+             However, it's important to note that function expressions (functions assigned to variables) are not hoisted in the same way as function declarations. Only the variable declaration is hoisted, not the function assignment. So, if you try to call a function expression before it is assigned, you will get an error.
+              <br><br>
+              bar(); // Error: bar is not a function <br>
+
+              var bar = function() { <br>
+              console.log("Hi"); <br> 
+                }; <br><br>
+                To avoid confusion and unexpected behavior, it's generally recommended to declare your variables and functions at the beginning of their scope, regardless of hoisting.
+
+
     </h3>
 </div>
 
+
+<div class="question">
+    <h2>Question :</h2>
+    <h3>What are different higher order functions in JS? What is the difference between .map()
+        and .forEach() ?
+      <b>(2 Marks)</b></h3>
+      <hr>
+      <h2>Answer :</h2>
+      <h3>
+        In JavaScript, higher-order functions are functions that can take other functions as arguments or return functions as their results. They are a powerful concept that allows for functional programming paradigms. We know that JavaScript provides us with some inbuilt higher order functions like map(), filter(), reduce() and so on. <br><br>
+
+       <b> Difference between map() and forEach(): </b> <br>
+       <br>
+       <ul>
+
+       <li>map() returns a new array with the transformed elements, while forEach() does not return anything (it returns undefined). <br></li>
+        <li>map() is used when you want to create a new array with modified elements based on the original array. It is useful when you need to transform data. <br></li>
+        <li>forEach() is used when you want to iterate over an array and perform an action or side effect for each element, without creating a new array. It is useful when you need to execute a function for its side effects, such as logging or modifying external variables.</li>
+    </ul>
+      </h3>
+  </div>
+
+  <div class="question">
+    <h2>Question :</h2>
+    <h3>What is the difference between .call() .apply() and .bind()?
+      <b>(2 Marks)</b></h3>
+      <hr>
+      <h2>Answer :</h2>
+      <h3>
+          <b>The main differences:</b> <br><br>
+          <ul>
+
+            <li>call() and apply() immediately invoke the function, while bind() returns a new function with a bound context.</li>
+            <li>call() and apply() accept individual arguments or an array-like object respectively, whereas bind() accepts arguments one at a time.</li>
+            <li>bind() allows you to create a partially applied function with pre-filled arguments that can be invoked later.</li>
+
+         
+            <hr>
+            <li>call: binds the this value, invokes the function, and allows you to pass a list of arguments.</li>
+            <li>apply: binds the this value, invokes the function, and allows you to pass arguments as an array.</li>
+            <li>bind: binds the this value, returns a new function, and allows you to pass in a list of arguments.</li>
+          </ul>
+      </h3>
+  </div>
+
+  <div class="question">
+    <h2>Question :</h2>
+    <h3>Explain Event bubbling and Event Capturing in JavaScript with suitable examples
+      <b>(2 Marks)</b></h3>
+      <hr>
+      <h2>Answer :</h2>
+      <h3>
+        Event bubbling and event capturing are two mechanisms used by JavaScript to handle events on elements within the DOM (Document Object Model) hierarchy. They describe how events propagate through nested elements. <br><br>
+
+        <ol>
+           <b>  <li>Event Bubbling:</li></b>
+           Event bubbling is the default behavior in JavaScript, where an event triggered on a specific element will first be handled by that element and then "bubble up" through its ancestors in the DOM tree until it reaches the root element (document). This means that the event will be handled by the innermost element first, then its parent, then the parent's parent, and so on.
+           <br><br>
+           Example: <br> <br>
+           <b>HTML FILE</b> <br> <br>
+           < div id="outer"> <br>
+            < div id="inner"> <br>
+              < button id="button">Click me< /button> <br>
+            < /div> <br>
+          < /div> <br> <br>
+          <b>JAVASCRIPT FILE</b> <br> <br>
+
+          const outer = document.getElementById('outer');<br>
+         const inner = document.getElementById('inner');<br>
+          const button = document.getElementById('button');<br>
+
+          button.addEventListener('click', function(event) {<br>
+            console.log('Button clicked');<br>
+          });<br>
+
+          inner.addEventListener('click', function(event) {<br>
+            console.log('Inner clicked');<br>
+          });<br>
+
+          outer.addEventListener('click', function(event) {<br>
+            console.log('Outer clicked');<br>
+          });<br>
+         <br>If you click the button, the event will trigger in the following order: "Button clicked," "Inner clicked,"          and "Outer clicked." The event propagates from the innermost element to the outermost element. <br><br>
+         <li><b>Event Capturing</b></li>
+         Event capturing is the opposite of event bubbling. In event capturing, the event is first captured by the root element (document) and then propagates down through its descendants until it reaches the target element.To use event capturing, you need to set the capture parameter of the addEventListener() method to true. <br><br>
+         Example: <br> <br>
+         outer.addEventListener('click', function(event) {<br>
+            console.log('Outer clicked');<br>
+          }, true);<br>
+          
+          inner.addEventListener('click', function(event) {<br>
+            console.log('Inner clicked');<br>
+          }, true);<br>
+          
+          button.addEventListener('click', function(event) {<br>
+            console.log('Button clicked');<br>
+          }, true);<br> <br>
+          With event capturing enabled, if you click the button, the event will trigger in the order: "Outer clicked," "Inner clicked," and "Button clicked." The event is captured by the outermost element first and then propagates down to the innermost element.It's important to note that event bubbling and event capturing are not mutually exclusive, and you can use either mechanism depending on your needs. By default, event listeners are set to use bubbling (capture parameter is false). However, you can explicitly enable event capturing by setting the capture parameter to true.
+        </ol>
+      </h3>
+  </div>
+
+  <div class="question">
+    <h2>Question :</h2>
+    <h3>What is function currying with example?
+      <b>(2 Marks)</b></h3>
+      <hr>
+      <h2>Answer :</h2>
+      <h3>
+        Function currying is a technique in JavaScript that allows you to transform a function with multiple arguments into a sequence of functions, each taking a single argument. The curried function returns a new function after each argument is passed, until all the arguments are fulfilled and the final result is obtained. This technique enables partial application of arguments, making the function more flexible and reusable. <br><br>
+        Here's an example to illustrate function currying: <br><br>
+        function add(x) { <br>
+            return function(y) {<br>
+              return x + y;<br>
+            };<br>
+          }<br>
+          <br>
+          const addTwo = add(2);<br>
+          console.log(addTwo(3)); // Output: 5<br>
+          <br>
+          In this example, the add() function takes a single argument x and returns an inner function that takes another argument y. When we call add(2), it returns a new function addTwo that adds 2 to any value passed to it. So, when we subsequently call addTwo(3), it adds 2 and 3 to give us the result 5.The add() function can be considered as a curried function. It has been transformed into a sequence of functions, allowing us to pass arguments incrementally and obtain a final result. This technique provides flexibility because we can reuse the curried function with different arguments, create specialized versions, or partially apply arguments to obtain new functions.
+      </h3>
+  </div>
+
+  <div class="question">
+    <h2>Question :</h2>
+    <h3>Explain execution context diagram of following code snippets : <br> <br>
+        <b>Code Snippet 1: <br> </b>
+        console.log('First'); <br>
+        setTimeout(() => console.log('Second'), 0); <br>
+        console.log('Third'); <br><br>
+       <b> Code Snippet 2 <br> </b>
+        console.log('First'); <br>
+        function secondCall() { <br>
+        console.log('Second'); <br>
+        } <br>
+        setTimeout(secondCall, 2000); <br>
+        setTimeout(() => console.log('Third'), 0); <br>
+        console.log('Third'); <br>
+      <b>(4 Marks)</b></h3>
+      <hr>
+      <h2>Answer :</h2>
+      <h3>
+        <strong>For Code Snippet 1:</strong> <br><br>
+        In the global execution context, the statements are executed sequentially. The console.log('First') is executed first, printing "First" to the console. Then, the setTimeout() function is called, which schedules the execution of the arrow function () => console.log('Second') to be executed asynchronously after a minimal delay (0 milliseconds in this case). The execution continues to the next line and console.log('Third') is executed, printing "Third" to the console. The arrow function in the setTimeout() is added to the event queue to be executed later. As the event loop processes the event queue, the arrow function will be executed, printing "Second" to the console. <br><br>
+        <strong>For Code Snippet 2:</strong> <br><br>
+        Similarly, in the global execution context, the statements are executed sequentially. The console.log('First') is executed first, printing "First" to the console. Then, the secondCall() function is defined. After that, the setTimeout() function is called with secondCall as the callback, which schedules the execution of secondCall after a delay of 2000 milliseconds (2 seconds). Next, another setTimeout() function is called with an arrow function () => console.log('Third'), which is scheduled to be executed asynchronously with a minimal delay (0 milliseconds). The execution continues to the next line, and console.log('Third') is executed, printing "Third" to the console. As time elapses, the first setTimeout triggers the execution of secondCall, printing "Second" to the console. Lastly, as the event loop processes the event queue, the arrow function from the second setTimeout is executed, printing "Third" to the console.
+      </h3>
+  </div>
+
+  <div class="question">
+    <h2>Question :</h2>
+    <h3>What are promises? What are the different states of a promise? Support your answer
+        with an example where you need to create your own promise.
+      <b>(2 Marks)</b></h3>
+      <hr>
+      <h2>Answer :</h2>
+      <h3>
+        Promises are a built-in feature in JavaScript that allow you to handle asynchronous operations in a more structured and manageable way. A promise represents the eventual completion (or failure) of an asynchronous operation and can be in one of three states: pending, fulfilled, or rejected. Here's an explanation of each state: <br><br>
+         <ul>
+
+        <li>Pending: The initial state of a promise when it is created. It means that the asynchronous operation associated with the promise has not completed yet.</li>
+        
+        <li>Fulfilled: The state of a promise when the asynchronous operation has completed successfully. It means that the promised value is available, and any associated callbacks registered with the promise will be executed with the fulfilled value.</li>
+        
+        <li>Rejected: The state of a promise when the asynchronous operation encounters an error or is rejected explicitly. It means that the promised value cannot be obtained due to an error or failure. Any associated error-handling callbacks registered with the promise will be executed.</li>
+    </ul> <br><br>
+    To create your own promise, you can use the Promise constructor, which takes a callback function as an argument. The callback function has two parameters: resolve and reject. Inside the callback function, you perform the asynchronous operation and call resolve(value) when the operation succeeds or reject(error) when it fails. Here's an example: <br><br>
+    function fetchData() {<br>
+        return new Promise((resolve, reject) => {<br>
+          // Simulating an asynchronous operation<br>
+          setTimeout(() => {<br>
+            const data = { id: 1, name: 'John' };<br>
+      <br>
+            // Check if data is available<br>
+            if (data) {<br>
+              resolve(data); // Promise fulfilled<br>
+            } else {<br>
+              reject(new Error('Data not found')); // Promise rejected<br>
+            }<br>
+          }, 2000);<br>
+        });<br>
+      }<br>
+      <br>
+      // Usage of the custom promise<br>
+      fetchData()<br>
+        .then((result) => {<br>
+          console.log('Fulfilled:', result);<br>
+        })<br>
+        .catch((error) => {<br>
+          console.log('Rejected:', error);<br>
+        });<br>
+      <br>
+      In this example, fetchData() is a custom function that returns a promise. Inside the promise constructor, a simulated asynchronous operation is performed using setTimeout(). After the delay of 2000 milliseconds, the promise is either fulfilled by calling resolve(data) with the data object or rejected by calling reject(new Error('Data not found')).
+      </h3>
+  </div>
+
+  <div class="question">
+    <h2>Question :</h2>
+    <h3>What is ‘this’ keyword in JavaScript? explain with an example & create
+      <b>(4 Marks)</b></h3>
+      <hr>
+      <h2>Answer :</h2>
+      <h3>
+        The this keyword in JavaScript refers to the context within which a function is executed. Its value is determined dynamically at runtime and depends on how a function is invoked. The value of this can vary based on the calling context. Here's an explanation with an example: <br><br>
+        const person = {<br>
+            name: 'John',<br>
+            sayHello: function() {<br>
+              console.log(`Hello, my name is ${this.name}`);<br>
+            }<br>
+          };<br>
+          <br>
+          person.sayHello(); // Output: Hello, my name is John<br> <br>
+          In this example, the this keyword inside the sayHello method refers to the person object. When the sayHello method is invoked using person.sayHello(), this is bound to the person object, allowing us to access the name property using this.name. <br><br>
+          The value of this depends on the context of the function invocation. It can be explicitly set using call(), apply(), or bind() methods, or it can be determined automatically based on the object on which the method is invoked.Understanding the this keyword is essential in JavaScript as it allows you to access and manipulate properties within the appropriate context, enabling object-oriented programming paradigms and method reuse.          
+      </h3>
+  </div>
+
+  <div class="question">
+    <h2>Question :</h2>
+    <h3>Explain event loop Call Stack Callback queue and Micro Task queue in Your Words
+      <b>(2 Marks)</b></h3>
+      <hr>
+      <h2>Answer :</h2>
+      <h3>
+        <ol>
+            <li><b>Call Stack:</b></li> <br>
+            The call stack is a data structure that keeps track of the currently executing functions in JavaScript. It follows the Last-In-First-Out (LIFO) principle, which means that the most recently pushed function is the first to be executed and removed. When a function is called, it is pushed onto the call stack, and when a function completes its execution, it is popped off the stack. The call stack manages the flow of execution in JavaScript. <br><br>
+            <li><b>Callback Queue:</b></li> <br>
+            The callback queue (also known as the task queue or message queue) is a queue data structure that holds callbacks or events waiting to be processed. When an asynchronous operation, such as a timer or an event, is completed, its associated callback function is placed in the callback queue. The event loop checks the callback queue when the call stack is empty, and if there are any callbacks in the queue, it pushes them onto the call stack for execution. <br><br>
+            <li><b>Micro Task Queue:</b></li> <br>
+            The micro task queue (also known as the promise queue) is a special queue that holds micro tasks, which are tasks with higher priority compared to regular callbacks in the callback queue. Micro tasks include promises and other tasks scheduled using methods like Promise.then(), Promise.catch(), or queueMicrotask(). Micro tasks have the advantage of being executed before the event loop checks the callback queue. This helps to ensure that certain tasks, like promise resolutions, are handled with higher priority and don't get delayed by other callbacks. <br><br>
+        </ol>
+      </h3>
+  </div>
+
+  
 </body>
+
 </html>
