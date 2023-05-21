@@ -5,19 +5,165 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>REACT QUESTIONS</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h1 style="text-align: center;">🎯 REACT QUESTIONS 🎯 </h1>
 
     <div class="question">
   <h2>Question :</h2>
-  <h3>
+  <h3>What’s React and What are the advantages of it?
     <b>(1 Marks)</b></h3>
     <hr>
     <h2>Answer :</h2>
     <h3>
-      
+        React is a popular JavaScript library for building user interfaces. It was developed by Facebook and is widely used for creating dynamic and interactive web applications. React allows developers to create reusable UI components and efficiently manage the state of the application. <br> <br>
+        <b>Advantages of React include:</b> <br>
+        <br>
+        <ul>
+            <li>Component-based architecture</li>
+            <li>Virtual DOM</li>
+            <li>One-way data flow</li>
+            <li>JSX syntax</li>
+            <li>Reusability and component reusability</li>
+            <li>Active community and ecosystem</li>
+            <li>React Native</li>
+        </ul>
     </h3>
 </div>
+
+<div class="question">
+    <h2>Question :</h2>
+    <h3>What's Virtual Dom in React & What are the advantages of it?
+      <b>(2 Marks)</b></h3>
+      <hr>
+      <h2>Answer :</h2>
+      <h3>
+        In React, the Virtual DOM (Document Object Model) is a lightweight representation of the actual DOM. It is a programming concept that React uses to efficiently update and render components. When you create a React application, you define the structure and behavior of the user interface using React components. Each component has a render method that describes what the component should render based on its current state and props.When the state or props of a component change, React updates the Virtual DOM instead of directly manipulating the actual DOM. React then performs a diffing algorithm to determine the minimal number of changes needed to update the Virtual DOM to match the new component state. After the diffing process, React generates a list of changes, or "diffs," and applies these changes to the actual DOM, resulting in an efficient update to the user interface. This approach helps avoid unnecessary and costly manipulations of the DOM. <br><br>
+        <b>Advantages of the Virtual DOM in React:</b> <br><br>
+        <ul>
+            <li>Performance</li>
+            <li>Efficiency</li>
+            <li>Cross-platform compatibility</li>
+            <li>Simplified programming model</li>
+        </ul>
+      </h3>
+  </div>
+
+  <div class="question">
+    <h2>Question :</h2>
+    <h3>Explain LifeCycle of React Components?
+      <b>(1 Marks)</b></h3>
+      <hr>
+      <h2>Answer :</h2>
+      <h3>
+        In React, components have a lifecycle that consists of different phases or stages. These lifecycle phases allow developers to execute code at specific points during a component's existence. React provides a set of methods, known as lifecycle methods, which can be overridden to define custom behavior at each phase.The lifecycle of a React component can be divided into three main phases: mounting, updating, and unmounting.In addition to that lifecycle methods, React also provides some other lifecycle methods that are less commonly used or have specific use cases, such as error handling (componentDidCatch()) and controlling behavior when props change (componentDidUpdate() and getSnapshotBeforeUpdate()).
+      </h3>
+  </div>
+
+  <div class="question">
+    <h2>Question :</h2>
+    <h3>Whats the difference between between Functional Components and Class
+        Components? 
+      <b>(1 Marks)</b></h3>
+      <hr>
+      <h2>Answer :</h2>
+      <h3>
+        <b>The Main Difference:</b> <br><br>
+        <ul>
+            <li><b>Syntax: </b></li>
+            Functional components are defined as functions, while class components are defined as ES6 classes. <br> <br>
+            <li><b>State:</b></li>
+            Functional components do not have their own state. They rely on props passed from parent components. Class components have their own state, which can be managed using the setState() method. <br> <br>
+            <li><b>Lifecycle methods:</b></li>
+            Class components have lifecycle methods like componentDidMount(), componentDidUpdate(), etc., which allow developers to perform actions at specific stages of the component's lifecycle. Functional components can use hooks like useEffect() to achieve similar functionality. <br> <br>
+            <li><b>Readability and simplicity:</b></li>
+            Functional components are generally considered more readable and simpler to write and understand. They have a more straightforward structure and do not require managing complex class-based syntax.
+        </ul>
+         
+      </h3>
+  </div>
+
+  <div class="question">
+    <h2>Question :</h2>
+    <h3>What are the hooks in React & Can we use Hooks in Class Components?
+      <b>(2 Marks)</b></h3>
+      <hr>
+      <h2>Answer :</h2>
+      <h3>
+        In React, hooks are functions that allow you to use state and other React features in functional components. They were introduced in React 16.8 as a way to write stateful logic without the need for class components. <br> <br>   
+        Regarding the use of hooks in class components, hooks are specifically designed for functional components and are not intended to be used in class components directly. Hooks rely on the functional component's ability to manage state and lifecycle with greater simplicity. <br><br>
+        In either case, it's important to note that class components and functional components have different lifecycles and syntax, so the migration or integration of hooks may require careful consideration and adjustment of the code.
+      </h3>
+  </div>
+
+  <div class="question">
+    <h2>Question :</h2>
+    <h3>What are the LifeCycle method and the advantages of it?
+      <b>(2 Marks)</b></h3>
+      <hr>
+      <h2>Answer :</h2>
+      <h3>
+        In React, lifecycle methods are special methods provided by the React component class that allow developers to define custom behavior at specific stages of a component's lifecycle. These methods are invoked automatically by React at various points during the component's existence. <br><br>
+
+        <b>Advantages of lifecycle methods:</b>
+
+        <ul>
+            <li>Control over component behavior</li>
+            <li>Side effects and data fetching</li>
+            <li>Performance optimization</li>
+            <li>Integration with third-party libraries</li>
+            <li>Cleanup and resource management</li>
+        </ul>
+      </h3>
+  </div>
+
+  <div class="question">
+    <h2>Question :</h2>
+    <h3>What’s useState Hook & Advantages of it?
+      <b>(2 Marks)</b></h3>
+      <hr>
+      <h2>Answer :</h2>
+      <h3>
+        The useState hook is a built-in hook in React that allows functional components to manage state. It provides a way to add stateful behavior to functional components without the need for class components.The useState hook takes an initial value as its argument and returns an array containing two elements: the current state value and a function to update that state. <br><br>
+         <b>Advantages of the useState hook:</b>
+        <ul>
+            <li>Simplified state management</li>
+            <li>No class-related overhead</li>
+            <li>Multiple state variables</li>
+            <li>Reactivity and re-rendering</li>
+        </ul>
+      </h3>
+  </div>
+
+  <div class="question">
+    <h2>Question :</h2>
+    <h3>Explain useEffect & Advantages of it
+      <b>(2 Marks)</b></h3>
+      <hr>
+      <h2>Answer :</h2>
+      <h3>
+        The useEffect hook is a built-in hook in React that allows functional components to perform side effects and manage lifecycle behavior. It replaces the functionality of lifecycle methods like componentDidMount, componentDidUpdate, and componentWillUnmount in class components.The useEffect hook takes two arguments: a function (effect) and an optional array of dependencies. The effect function is executed after every render, and it can perform side effects such as data fetching, subscriptions, or interacting with the DOM. The dependencies array is used to specify values that the effect depends on. If any of the dependencies change, the effect is re-run. <br><br>
+        <b>Advantages of the useEffect hook:</b>
+        <ul>
+            <li>Side effects in functional components</li>
+            <li>Lifecycle management</li>
+            <li>Cleanup and resource management</li>
+            <li>Integration with other hooks</li>
+        </ul>
+      </h3>
+  </div>
+
+  <div class="question">
+    <h2>Question :</h2>
+    <h3>Explain Context Api and create a minor project on it <br>
+        - Create dashboard and with button on clicking on that change theme to dark and light
+      <b>(5 Marks)</b></h3>
+      <hr>
+      <h2>Answer :</h2>
+      <h3>
+          
+      </h3>
+  </div>
 </body>
 </html>
