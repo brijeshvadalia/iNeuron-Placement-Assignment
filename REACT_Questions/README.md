@@ -37,10 +37,10 @@
 >![BADGE](https://img.shields.io/badge/GIT-GIT-orange)
 >![BADGE](https://img.shields.io/badge/NETLIFY-NETLIFY-blue)
 
-<!-- # Reminder 😮
+# Reminder 😮
 
 # HERE IS THE PREVIEW HOW THIS PROJECT LOOKS😍
-># [LIVE [HOSTED] PROJECT LINK](https://brijesh8128-html-questions.netlify.app/ "HTML-QUESTIONS") -->
+># [LIVE [HOSTED] PROJECT LINK](https://brijesh8128-react-questions.netlify.app/ "REACT-QUESTIONS")
 
 
 >## For any query you can reach out at brijeshvadaliya1@gmail.com I am happy to help 😎
