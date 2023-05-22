@@ -12,13 +12,123 @@
 
     <div class="question">
   <h2>Question :</h2>
-  <h3>
-    <b>(1 Marks)</b></h3>
+  <h3>Create a simple server using Express and connect with backend and create an endpoint
+    “/post” which sends 20 posts
+    <b>(3 Marks)</b></h3>
     <hr>
     <h2>Answer :</h2>
     <h3>
-        
-    </h3>
+        Link : <a href="./simpleServer.md">Simple Server Using Express</a>
+       </h3>
 </div>
+
+<div class="question">
+    <h2>Question :</h2>
+    <h3>Explain a middleware and create a middleware that checks is user authenticated or not
+        then send data of post
+      <b>(4 Marks)</b></h3>
+      <hr>
+      <h2>Answer :</h2>
+      <h3>
+        In the context of web development, middleware refers to a function or a set of functions that sit between the server and the route handlers. Middleware functions have access to the request and response objects and can perform various operations before passing the control to the next middleware or route handler.Middleware can be used for tasks such as authentication, logging, error handling, modifying the request or response, and more. It provides a way to execute common functionalities across multiple routes without duplicating code. <br><br>
+          Link : <a href="./middleware.md">Middleware</a>
+         </h3>
+  </div>
+
+  <div class="question">
+    <h2>Question :</h2>
+    <h3>Create a backend for blog app, where user can perform crud operations <br>
+        - Add blog <br>
+        - Delete blog <br> 
+        - Update blog <br>
+        - Replace blog <br> <br>
+      <b>(10 Marks)</b></h3>
+      <hr>
+      <h2>Answer :</h2>
+      <h3>
+       Link : <a href="./blogApp.md">Blog App</a>
+      </h3>
+  </div>
+
+  
+  <div class="question">
+    <h2>Question :</h2>
+    <h3>What is the difference between authentication and authorization?
+      <b>(2 Marks)</b></h3>
+      <hr>
+      <h2>Answer :</h2>
+      <h3>
+        Authentication and authorization are two distinct concepts related to user access control in a system. Authentication is about verifying the identity of a user, while authorization is about determining what actions or resources a user is allowed to access based on their authenticated identity and assigned permissions. Both authentication and authorization are essential components of a secure web application, and they work together to protect sensitive data and control user access.
+      </h3>
+  </div>
+
+  
+  <div class="question">
+    <h2>Question :</h2>
+    <h3>What is he difference between common JS and EJS module?
+      <b>(2 Marks)</b></h3>
+      <hr>
+      <h2>Answer :</h2>
+      <h3>
+        The main difference between CommonJS (CJS) and EJS (Embedded JavaScript) modules lies in their respective purposes and usage contexts: <br><br>
+
+        <ul>
+            <b>CommonJS (CJS) Modules:</b> <br> <br>
+            <li>CommonJS is a module system used primarily in Node.js environments.</li>
+            <li>It follows a synchronous approach for module loading, where modules are loaded and executed synchronously.</li>
+            <li>CommonJS modules use the require() function to import modules and the module.exports or exports object to define the module's public API.</li>
+            <li>It is designed for server-side JavaScript and is commonly used for modularizing code in Node.js applications.</li>
+<br><br>
+            <b>EJS (Embedded JavaScript) Modules:</b> <br> <br>
+
+            <li>EJS is a template engine for rendering HTML templates with embedded JavaScript code.</li>
+            <li>EJS is primarily used in web development scenarios, both on the server-side (with Node.js) and the client-side (in browsers).</li>
+            <li>EJS templates allow developers to embed JavaScript code within HTML markup, which is then executed during rendering to dynamically generate the final HTML output.</li>
+            <li>EJS templates use <% %> tags to enclose JavaScript code and <%= %> tags to output the result of an expression within the generated HTML.</li>
+        </ul>
+      </h3>
+  </div>
+
+  <div class="question">
+    <h2>Question :</h2>
+    <h3>What is JWT and what we can achieve with that create a minor project with jwt <br>
+        - Login and sign up <br>
+        - Add authentication using jwt <br><br>
+      <b>(5 Marks)</b></h3>
+      <hr>
+      <h2>Answer :</h2>
+      <h3>JWT stands for JSON Web Token. It is a compact, self-contained, and secure way of transmitting information between parties as a JSON object. JWTs are commonly used for authentication and authorization purposes in web applications.A JWT consists of three parts: a header, a payload, and a signature. The header contains information about the type of token and the signing algorithm used. The payload contains the claims or statements about the user and additional data. The signature is used to verify the authenticity of the token. <br><br>
+       Link : <a href="./jwtProject.md">JWT Minor Project</a>
+      </h3>
+  </div>
+
+  <div class="question">
+    <h2>Question :</h2>
+    <h3>What should we do with the password of a user before storing it into DB?
+      <b>(2 Marks)</b></h3>
+      <hr>
+      <h2>Answer :</h2>
+      <h3>
+        When storing user passwords in a database, it is crucial to follow security best practices to protect the sensitive information. Here are some recommended steps to handle user passwords: <br><br>
+        <ul>
+            <li><b>Hashing:</b>Instead of storing passwords in plain text, use a strong cryptographic hashing algorithm to convert the password into a fixed-length string of characters. Hashing is a one-way process, meaning it is computationally infeasible to reverse-engineer the original password from the hash.Commonly used hashing algorithms include bcrypt, Argon2, and scrypt.</li>
+            <li><b>Salt:</b>To further enhance security, incorporate a unique salt value for each password. A salt is a random value that is added to the password before hashing, making it more resistant to precomputed dictionary attacks and rainbow table attacks. The salt value should be unique for each user and stored alongside the hashed password.</li>
+            <li><b>Iterations:</b>Perform multiple iterations of the hashing algorithm to increase the time and computational resources required to hash a password. This adds an additional layer of protection against brute-force attacks. The number of iterations should be chosen to strike a balance between security and performance.</li> <br><br>
+            By following these steps, even if an attacker gains access to the hashed passwords in the database, it becomes extremely difficult for them to retrieve the original passwords.
+        </ul>
+      </h3>
+  </div>
+
+  <div class="question">
+    <h2>Question :</h2>
+    <h3>Whats event loop in NodeJS
+      <b>(2 Marks)</b></h3>
+      <hr>
+      <h2>Answer :</h2>
+      <h3>
+        The event loop is a crucial component of the Node.js runtime that enables non-blocking, asynchronous processing. It is responsible for handling and executing asynchronous operations efficiently in a single-threaded environment.In Node.js, most I/O operations (such as reading from or writing to the file system or making network requests) are non-blocking and asynchronous. Instead of waiting for these operations to complete before moving on to the next task, Node.js utilizes an event-driven architecture and the event loop to handle multiple concurrent operations. <br><br>
+        The event loop enables Node.js to handle many concurrent operations efficiently with a single thread. It avoids blocking operations and maximizes the utilization of system resources, allowing Node.js to handle a high number of concurrent connections and I/O-intensive tasks.It's important to note that while the event loop handles asynchronous operations, CPU-intensive tasks can block the event loop and impact the overall performance of the application. To mitigate this, Node.js provides mechanisms like worker threads or process for parallel execution of CPU-bound tasks.
+      </h3>
+  </div>
 </body>
 </html>
