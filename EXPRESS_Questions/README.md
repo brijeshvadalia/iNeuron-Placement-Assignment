@@ -36,6 +36,11 @@
 >![BADGE](https://img.shields.io/badge/VS-CODE-blue)
 >![BADGE](https://img.shields.io/badge/GIT-GIT-orange)
 
+# Reminder 😮
+
+# HERE IS THE PREVIEW HOW THIS PROJECT LOOKS😍
+># [LIVE [HOSTED] PROJECT LINK](https://brijesh8128-express-questions.netlify.app/ "EXPRESS-QUESTIONS")
+
 
 >## For any query you can reach out at brijeshvadaliya1@gmail.com I am happy to help 😎
 
