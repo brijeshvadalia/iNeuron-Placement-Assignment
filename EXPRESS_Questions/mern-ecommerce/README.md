@@ -1,5 +1,8 @@
 # MERN Ecommerce Application
 
+# HERE IS THE PREVIEW HOW THIS PROJECT LOOKS😍
+># [LIVE [HOSTED] PROJECT LINK](https://shemashop.vercel.app/ "E-COMMERCE WEBSITE")
+
 <code>Currently under construction for additional features</code>
 
 # Description
