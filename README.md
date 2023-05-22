@@ -23,12 +23,21 @@
 >![BADGE](https://img.shields.io/badge/VS-CODE-blue)
 >![BADGE](https://img.shields.io/badge/GIT-GIT-orange)
 
+
+># All Questions Folder Path 
 ># [HTML QUESTIONS ✔](https://github.com/brijeshvadalia/iNeuron-Placement-Assignment/tree/master/Html_Questions)
 ># [CSS QUESTIONS ✔](https://github.com/brijeshvadalia/iNeuron-Placement-Assignment/tree/master/CSS_Questions)
 ># [JAVASCRIPT QUESTIONS ✔](https://github.com/brijeshvadalia/iNeuron-Placement-Assignment/tree/master/JAVASCRIPT_Questions)
 ># [REACT QUESTIONS ✔](https://github.com/brijeshvadalia/iNeuron-Placement-Assignment/tree/master/REACT_Questions)
+># [EXPRESS QUESTIONS ✔](https://github.com/brijeshvadalia/iNeuron-Placement-Assignment/tree/master/EXPRESS_Questions)
 
-> ![In Progress](https://img.shields.io/badge/In--Progress--Hang--Tight-F16061?style=for-the-badge&logo=ko-fi&logoColor=white)
+
+># All Questions Live Link ⚡
+># [HTML LIVE LINK 🚀](https://brijesh8128-html-questions.netlify.app/ "HTML LIVE LINK")
+># [CSS LIVE LINK 🚀](https://brijesh8128-css-questions.netlify.app/ "CSS LIVE LINK")
+># [JAVASCRIPT LIVE LINK 🚀](https://brijesh8128-javascript-questions.netlify.app/ "JAVASCRIPT LIVE LINK") 
+># [REACT LIVE LINK 🚀](https://brijesh8128-react-questions.netlify.app/ "REACT LIVE LINK")
+># [EXPRESS LIVE LINK 🚀](https://brijesh8128-express-questions.netlify.app/ "EXPRESS LIVE LINK")
 
 >## For any query you can reach out at brijeshvadaliya1@gmail.com I am happy to help 😎
 
